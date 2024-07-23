@@ -15,7 +15,6 @@ class Request:
         return f"id: {self.id}, title: {self.title}"
 
 
-# Створити чергу заявок
 queue: Queue = Queue()
 
 
