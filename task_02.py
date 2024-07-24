@@ -1,11 +1,11 @@
 from collections import deque as Deque
 
-def is_palindrom(word: str) -> bool:
-    word = word.lower()
+def is_palindrom(txt: str) -> bool:
+    txt = txt.lower().replace(" ", "")
 
     deque: Deque = Deque()
 
-    for letter in word:
+    for letter in txt:
         deque.append(letter)
 
     while len(deque) > 1:
@@ -18,6 +18,7 @@ def is_palindrom(word: str) -> bool:
 
 def _should_check_if_palindrom():
     assert is_palindrom("Wow")
+    assert is_palindrom("Wo  w ")
     assert is_palindrom("Woow")
     assert not is_palindrom("Whow")
 
